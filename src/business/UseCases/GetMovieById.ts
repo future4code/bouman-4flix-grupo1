@@ -1,5 +1,4 @@
 import { MovieGateway } from "../gateways/movieGateways";
-import { Movie } from "../Entities/movie";
 
 
 export class GetMovieByIdUC {
