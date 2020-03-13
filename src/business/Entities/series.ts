@@ -1,3 +1,5 @@
+import { Episode } from "./episode"
+
 export class Series {
 
     constructor(
@@ -6,7 +8,8 @@ export class Series {
         private synopsis: string,
         private date: Date,        
         private link: string,
-        private picture: string
+        private picture: string,
+        public episodes: Episode[]
     ) { }
 
     public getId = (): string => this.id
