@@ -1,4 +1,5 @@
 import { MovieGateway } from "../gateways/movieGateways";
+import { NotFoundError } from "../error/NotFoundError";
 
 
 export class GetMovieByIdUC {
@@ -12,7 +13,7 @@ export class GetMovieByIdUC {
     const movie = await this.movieGateway.getMovieById(id);
 
     if (!movie) {
-      throw new Error("Movie not found");
+      throw new NotFoundError("Movie not found");
     }
 
     return {
